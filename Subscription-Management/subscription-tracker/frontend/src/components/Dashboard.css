@@ -1,0 +1,355 @@
+.dashboard-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.dashboard-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    animation: dashboardSlideUp 0.5s ease;
+}
+
+@keyframes dashboardSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dashboard-subtitle {
+    color: #666;
+    margin: 6px 0 0;
+    font-size: 14px;
+}
+
+.help-text {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dashboard-greeting {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+    border: 1px solid #f0f0f0;
+}
+
+.dashboard-card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.dashboard-banner {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+}
+
+.dashboard-banner h2 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 24px;
+}
+
+.dashboard-banner p,
+.dashboard-section-header p {
+    margin: 8px 0 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.22);
+}
+
+.dashboard-stat-label {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+
+.dashboard-stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dashboard-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-section-header.dashboard-section-header--centered {
+    justify-content: center;
+    text-align: center;
+}
+
+.dashboard-section-header.dashboard-section-header--centered > div {
+    max-width: 700px;
+}
+
+.table-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.table-actions .primary-button,
+.table-actions .secondary-button {
+    padding: 10px 18px;
+}
+
+.table-actions .secondary-button {
+    background: #6c757d;
+}
+
+.table-actions .primary-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.table-actions .primary-button:hover,
+.table-actions .secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    border-bottom: 1px solid #e9ecef;
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.dashboard-table th {
+    background: #f8f9fa;
+    color: #495057;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #fafbff;
+}
+
+.delete-btn {
+    border: none;
+    background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.delete-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(238, 9, 121, 0.25);
+}
+
+.empty-state {
+    text-align: center;
+    color: #666;
+}
+
+.dashboard-message {
+    margin-bottom: 20px;
+}
+
+.settings-content {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.settings-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.settings-card {
+    border-left: 4px solid #dc3545;
+}
+
+.form-card form {
+    display: grid;
+    gap: 14px;
+    max-width: 420px;
+}
+
+.form-card input {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-card input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+}
+
+.primary-button,
+.secondary-button {
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.secondary-button {
+    background: #6c757d;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .dashboard-shell {
+        padding: 24px 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-actions {
+        width: 100%;
+    }
+
+    .dashboard-actions .primary-button,
+    .dashboard-actions .secondary-button {
+        flex: 1;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+    .dashboard-banner {
+        padding: 20px;
+    }
+    /* Delete Account Button */
+.delete-account-button {
+  padding: 10px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  margin-right: 10px;
+}
+
+.delete-account-button:hover {
+  background: #bd2130;
+}
+
+
+.delete-account-warning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  color: #856404;
+  font-size: 13px;
+  text-align: center;
+}
+
+.delete-account-warning strong {
+  color: #dc3545;
+}
+}
